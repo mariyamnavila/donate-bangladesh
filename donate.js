@@ -1,9 +1,14 @@
+
+const now = new Date();
+
+const time = now.toUTCString()
+
 document.getElementById('btn-donate1')
     .addEventListener('click', function (event) {
         event.preventDefault;
         const floodNoakhali = getInputValueById('flood-noakhali-input');
         const currentAmount = getBalance('flood-noakhali-balance');
-        // console.log(currentAmount)
+        // const title = document.getElementById('noakhali-title').innerText;
         if (isNaN(floodNoakhali) || floodNoakhali < 0) {
             alert('Invalid Amount');
             return;
@@ -12,6 +17,14 @@ document.getElementById('btn-donate1')
             const newBalance = floodNoakhali + currentAmount;
             document.getElementById('flood-noakhali-balance').innerText = newBalance;
             presentBalance('flood-noakhali-input');
+
+            const div = document.createElement('div');
+            div.classList.add('border', 'rounded-lg', 'p-8', 'w-full', 'mx-auto')
+            div.innerText = `${floodNoakhali} taka is Donated for Flood at Noakhali,Bangladesh
+            ${time}
+            `;
+            // console.log(p)
+            document.getElementById('history-container').appendChild(div);
         }
     })
 document.getElementById('btn-donate2')
@@ -19,7 +32,6 @@ document.getElementById('btn-donate2')
         event.preventDefault;
         const floodFeni = getInputValueById('flood-feni-input');
         const currentAmount = getBalance('flood-feni-balance');
-        // console.log(currentAmount)
         if (isNaN(floodFeni) || floodFeni < 0) {
             alert('Invalid Amount');
             return;
@@ -28,6 +40,14 @@ document.getElementById('btn-donate2')
             const newBalance = floodFeni + currentAmount;
             document.getElementById('flood-feni-balance').innerText = newBalance;
             presentBalance('flood-feni-input');
+
+            const div = document.createElement('div');
+            div.classList.add('border', 'rounded-lg', 'p-8', 'w-full', 'mx-auto')
+            div.innerText = `${floodFeni} taka is Donated for Flood Relief in Feni,Bangladesh.
+            ${time}
+            `;
+            // console.log(p)
+            document.getElementById('history-container').appendChild(div);
         }
     })
 document.getElementById('btn-donate3')
@@ -35,7 +55,6 @@ document.getElementById('btn-donate3')
         event.preventDefault;
         const quotaInput = getInputValueById('quota-input');
         const currentAmount = getBalance('quota-balance');
-        // console.log(currentAmount)
         if (isNaN(quotaInput) || quotaInput < 0) {
             alert('Invalid Amount');
             return;
@@ -43,8 +62,16 @@ document.getElementById('btn-donate3')
         else {
             const newBalance = quotaInput + currentAmount;
             document.getElementById('quota-balance').innerText = newBalance;
-            
+
             presentBalance('quota-input');
+
+            const div = document.createElement('div');
+            div.classList.add('border', 'rounded-lg', 'p-8', 'w-full', 'mx-auto')
+            div.innerText = `${quotaInput} taka is Donated for Aid for Injured in the Quota Movement,Bangladesh .
+            ${time}
+            `;
+            // console.log(p)
+            document.getElementById('history-container').appendChild(div);
 
         }
     })

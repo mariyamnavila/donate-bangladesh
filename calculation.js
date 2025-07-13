@@ -23,3 +23,18 @@ function presentBalance(id) {
     const presentB = presentNumber - getInputValueById(id)
     document.getElementById('balance').innerText = presentB;
 }
+
+function showSection(id){
+    document.getElementById('donate-section').classList.add('hidden');
+    document.getElementById('history-section').classList.add('hidden');
+
+    document.getElementById(id).classList.remove('hidden')
+}
+function changeColor(id){
+    document.getElementById('btn-show-donate').classList.remove('bg-[#B4F461]');
+    document.getElementById('btn-show-history').classList.remove('bg-[#B4F461]');
+
+    document.getElementById(id).classList.add('bg-[#B4F461]')
+
+}
+
