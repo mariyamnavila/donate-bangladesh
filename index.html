@@ -33,7 +33,7 @@
                 </div>
                 <div class="flex items-center space-x-3">
                     <img src="assets/coin.png" alt="">
-                    <p class="text-gray-700 font-semibold"><span>5500</span>BDT</p>
+                    <p class="text-gray-700 font-semibold"><span id="balance">5500</span>BDT</p>
                 </div>
             </nav>
             <div class="container flex mx-auto justify-center gap-4 py-8">
@@ -59,7 +59,8 @@
                         supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     <input id="flood-noakhali-input" class="border border-[#1111111A] rounded-lg p-4 w-full" type="text"
                         placeholder="Write Donation Amount">
-                    <button class="btn bg-[#B4F461] font-semibold text-xl w-full" onclick="my_modal_1.showModal()">Donate Now</button>
+                    <button id="btn-donate1" class="btn bg-[#B4F461] font-semibold text-xl w-full"
+                        onclick="my_modal_1.showModal()">Donate Now</button>
                     <dialog id="my_modal_1" class="modal">
                         <div class="modal-box space-y-3">
                             <h3 class="text-4xl font-bold text-center">Congrats!</h3>
@@ -95,7 +96,8 @@
                         those in urgent need.</p>
                     <input id="flood-feni-input" class="border border-[#1111111A] rounded-lg p-4 w-full" type="text"
                         placeholder="Write Donation Amount">
-                    <button class="btn bg-[#B4F461] font-semibold text-xl w-full" onclick="my_modal_2.showModal()">Donate Now</button>
+                    <button id="btn-donate2" class="btn bg-[#B4F461] font-semibold text-xl w-full"
+                        onclick="my_modal_2.showModal()">Donate Now</button>
                     <dialog id="my_modal_2" class="modal">
                         <div class="modal-box space-y-3">
                             <h3 class="text-4xl font-bold text-center">Congrats!</h3>
@@ -133,7 +135,8 @@
                         need.</p>
                     <input id="quota-input" class="border border-[#1111111A] rounded-lg p-4 w-full" type="text"
                         placeholder="Write Donation Amount">
-                    <button class="btn bg-[#B4F461] font-semibold text-xl w-full" onclick="my_modal_3.showModal()">Donate Now</button>
+                    <button id="btn-donate3" class="btn bg-[#B4F461] font-semibold text-xl w-full"
+                        onclick="my_modal_3.showModal()">Donate Now</button>
                     <dialog id="my_modal_3" class="modal">
                         <div class="modal-box space-y-3">
                             <h3 class="text-4xl font-bold text-center">Congrats!</h3>
@@ -152,6 +155,9 @@
                 </div>
             </div>
         </section>
+        <section>
+
+        </section>
         <section class="bg-[#F9F7F3] py-14">
             <div class="container ">
 
@@ -159,6 +165,8 @@
         </section>
     </main>
     <script src="home.js"></script>
+    <script src="donate.js"></script>
+    <script src="calculation.js"></script>
 </body>
 
 </html>
