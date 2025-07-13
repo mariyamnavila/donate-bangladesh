@@ -36,6 +36,9 @@ document.getElementById('btn-donate2')
         const floodFeni = getInputValueById('flood-feni-input');
         const currentAmount = getBalance('flood-feni-balance');
         if (isNaN(floodFeni) || floodFeni < 0) {
+            document.getElementById('congrats').innerText = 'Sorry!';
+            document.getElementById('donated').innerText = 'Donation Failed';
+            document.getElementById('success').innerText = 'Unsuccessful';
             alert('Invalid Amount');
             return;
         }
@@ -59,6 +62,9 @@ document.getElementById('btn-donate3')
         const quotaInput = getInputValueById('quota-input');
         const currentAmount = getBalance('quota-balance');
         if (isNaN(quotaInput) || quotaInput < 0) {
+            document.getElementById('congrats').innerText = 'Sorry!';
+            document.getElementById('donated').innerText = 'Donation Failed';
+            document.getElementById('success').innerText = 'Unsuccessful';
             alert('Invalid Amount');
             return;
         }
