@@ -1,15 +1,18 @@
 
+const present = document.getElementById('balance').innerText;
+const presentNumber = parseFloat(present);
+
+
 const now = new Date();
 
 const time = now.toUTCString()
 
 document.getElementById('btn-donate1')
     .addEventListener('click', function (event) {
-        event.preventDefault;
+        event.preventDefault();
         const floodNoakhali = getInputValueById('flood-noakhali-input');
         const currentAmount = getBalance('flood-noakhali-balance');
-        // const title = document.getElementById('noakhali-title').innerText;
-        if (isNaN(floodNoakhali) || floodNoakhali < 0) {
+        if (isNaN(floodNoakhali) || floodNoakhali < 0 || floodNoakhali > presentNumber) {
             document.getElementById('congrats').innerText = 'Sorry!';
             document.getElementById('donated').innerText = 'Donation Failed';
             document.getElementById('success').innerText = 'Unsuccessful';
@@ -37,10 +40,10 @@ document.getElementById('btn-donate1')
     })
 document.getElementById('btn-donate2')
     .addEventListener('click', function (event) {
-        event.preventDefault;
+        event.preventDefault();
         const floodFeni = getInputValueById('flood-feni-input');
         const currentAmount = getBalance('flood-feni-balance');
-        if (isNaN(floodFeni) || floodFeni < 0) {
+        if (isNaN(floodFeni) || floodFeni < 0 || floodFeni > presentNumber) {
             document.getElementById('congrats').innerText = 'Sorry!';
             document.getElementById('donated').innerText = 'Donation Failed';
             document.getElementById('success').innerText = 'Unsuccessful';
@@ -62,16 +65,15 @@ document.getElementById('btn-donate2')
             div.innerText = `${floodFeni} taka is Donated for Flood Relief in Feni,Bangladesh.
             ${time}
             `;
-            // console.log(p)
             document.getElementById('history-container').appendChild(div);
         }
     })
 document.getElementById('btn-donate3')
     .addEventListener('click', function (event) {
-        event.preventDefault;
+        event.preventDefault();
         const quotaInput = getInputValueById('quota-input');
         const currentAmount = getBalance('quota-balance');
-        if (isNaN(quotaInput) || quotaInput < 0) {
+        if (isNaN(quotaInput) || quotaInput < 0 || quotaInput > presentNumber) {
             document.getElementById('congrats').innerText = 'Sorry!';
             document.getElementById('donated').innerText = 'Donation Failed';
             document.getElementById('success').innerText = 'Unsuccessful';
@@ -94,7 +96,6 @@ document.getElementById('btn-donate3')
             div.innerText = `${quotaInput} taka is Donated for Aid for Injured in the Quota Movement,Bangladesh .
             ${time}
             `;
-            // console.log(p)
             document.getElementById('history-container').appendChild(div);
 
         }
