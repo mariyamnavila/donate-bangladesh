@@ -1,13 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- daisy ui cdn -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .font-lexend {
+  font-family: "Lexend", sans-serif;
+}
+    </style>
 </head>
-<body>
+
+<body class="font-lexend">
     <main>
-        <section></section>
+        <!-- navbar section -->
+        <section class=" bg-[#F9F7F3] pb-10">
+            <nav class="container py-6 flex justify-between mx-auto">
+                <button class="btn bg-[#B4F461] font-bold text-xl">Blog</button>
+                <div class="flex items-center space-x-4">
+                    <img src="assets/logo.png" alt="">
+                    <h4 class="font-bold text-xl">Donate Bangladesh</h4>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <img src="assets/coin.png" alt="">
+                    <p class="text-gray-700 font-semibold"><span >5500</span>BDT</p>
+                </div>
+            </nav>
+        </section>
     </main>
 </body>
+
 </html>
