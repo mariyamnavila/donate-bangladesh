@@ -3,7 +3,7 @@ function btnCall(id) {
             window.location.href = '/home.html';
         }
         else if (id === 'home-btn') {
-            window.location.href = '/blog.html';
+            window.location.href = '/index.html';
         }
     }
 // document.getElementById('home-btn')
