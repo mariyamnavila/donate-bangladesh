@@ -10,6 +10,9 @@ document.getElementById('btn-donate1')
         const currentAmount = getBalance('flood-noakhali-balance');
         // const title = document.getElementById('noakhali-title').innerText;
         if (isNaN(floodNoakhali) || floodNoakhali < 0) {
+            document.getElementById('congrats').innerText = 'Sorry!';
+            document.getElementById('donated').innerText = 'Donation Failed';
+            document.getElementById('success').innerText = 'Unsuccessful';
             alert('Invalid Amount');
             return;
         }
