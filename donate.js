@@ -44,17 +44,17 @@ document.getElementById('btn-donate2')
         const floodFeni = getInputValueById('flood-feni-input');
         const currentAmount = getBalance('flood-feni-balance');
         if (isNaN(floodFeni) || floodFeni < 0 || floodFeni > presentNumber) {
-            document.getElementById('congrats').innerText = 'Sorry!';
-            document.getElementById('donated').innerText = 'Donation Failed';
-            document.getElementById('success').innerText = 'Unsuccessful';
+            document.getElementById('congrats1').innerText = 'Sorry!';
+            document.getElementById('donated1').innerText = 'Donation Failed';
+            document.getElementById('success1').innerText = 'Unsuccessful';
             alert('Invalid Amount');
             return;
         }
         else {
 
-            document.getElementById('congrats').innerText = 'Congrats!';
-            document.getElementById('donated').innerText = 'You Have Donated for Humankind';
-            document.getElementById('success').innerText = 'Successfully';
+            document.getElementById('congrats1').innerText = 'Congrats!';
+            document.getElementById('donated1').innerText = 'You Have Donated for Humankind';
+            document.getElementById('success1').innerText = 'Successfully';
 
             const newBalance = floodFeni + currentAmount;
             document.getElementById('flood-feni-balance').innerText = newBalance;
@@ -74,17 +74,17 @@ document.getElementById('btn-donate3')
         const quotaInput = getInputValueById('quota-input');
         const currentAmount = getBalance('quota-balance');
         if (isNaN(quotaInput) || quotaInput < 0 || quotaInput > presentNumber) {
-            document.getElementById('congrats').innerText = 'Sorry!';
-            document.getElementById('donated').innerText = 'Donation Failed';
-            document.getElementById('success').innerText = 'Unsuccessful';
+            document.getElementById('congrats2').innerText = 'Sorry!';
+            document.getElementById('donated2').innerText = 'Donation Failed';
+            document.getElementById('success2').innerText = 'Unsuccessful';
             alert('Invalid Amount');
             return;
         }
         else {
 
-            document.getElementById('congrats').innerText = 'Congrats!';
-            document.getElementById('donated').innerText = 'You Have Donated for Humankind';
-            document.getElementById('success').innerText = 'Successfully';
+            document.getElementById('congrats2').innerText = 'Congrats!';
+            document.getElementById('donated2').innerText = 'You Have Donated for Humankind';
+            document.getElementById('success2').innerText = 'Successfully';
 
             const newBalance = quotaInput + currentAmount;
             document.getElementById('quota-balance').innerText = newBalance;
