@@ -17,6 +17,11 @@ document.getElementById('btn-donate1')
             return;
         }
         else {
+
+            document.getElementById('congrats').innerText = 'Congrats!';
+            document.getElementById('donated').innerText = 'You Have Donated for Humankind';
+            document.getElementById('success').innerText = 'Successfully';
+
             const newBalance = floodNoakhali + currentAmount;
             document.getElementById('flood-noakhali-balance').innerText = newBalance;
             presentBalance('flood-noakhali-input');
@@ -43,6 +48,11 @@ document.getElementById('btn-donate2')
             return;
         }
         else {
+
+            document.getElementById('congrats').innerText = 'Congrats!';
+            document.getElementById('donated').innerText = 'You Have Donated for Humankind';
+            document.getElementById('success').innerText = 'Successfully';
+
             const newBalance = floodFeni + currentAmount;
             document.getElementById('flood-feni-balance').innerText = newBalance;
             presentBalance('flood-feni-input');
@@ -69,6 +79,11 @@ document.getElementById('btn-donate3')
             return;
         }
         else {
+
+            document.getElementById('congrats').innerText = 'Congrats!';
+            document.getElementById('donated').innerText = 'You Have Donated for Humankind';
+            document.getElementById('success').innerText = 'Successfully';
+
             const newBalance = quotaInput + currentAmount;
             document.getElementById('quota-balance').innerText = newBalance;
 
